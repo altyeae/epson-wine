@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+h1, h2, p {
+    margin: 0
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.container {
+    min-width: 1920px;
+    margin: 0 auto;
+}
+
+body {
+    margin: 0;
+    scroll-behavior: smooth;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    min-width: 1920px;
+    background-color: #000000;
+}
+
+.header-container {
+    display: flex;
+    max-height: 92px;
+}
+
+.header-container a {
+    text-decoration: none;
+}
+
+.header-logo {
+    color: #D7BB71;
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin: 22px 303px 21px 279px;
+}
+
+.nav-list {
+    display: flex;
+    color: #DCBD6B;
+    list-style: none;
+    text-transform: uppercase;
+    margin: 32px 0 31px;
+}
+
+.arrow {
+    height: 12px;
+    width: 12px;
+    border-top: 2px solid #D7BB71;
+    border-left: 2px solid #D7BB71;
+    transform: rotate(45deg);
+    margin: 11px 0 0 9px;
+    transition: all 0.3s;
+}
+
+.arrow-active {
+    transform: rotate(-135deg);
+    margin: 5px 0 0 9px;
+    transition: all 0.3s;
+}
+
+.nav-item {
+    display: flex;
+    position: relative;
+    margin-right: 144px;
+    font-weight: 400;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav-item:hover::before {
+    opacity: 1;
+}
+
+.nav-item:nth-child(2)::before {
+    opacity: 0;
+}
+
+.nav-item::before {
+    content: '';
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #D7BB71;
+    left: 0;
+    bottom: -5px;
+    transition: all 0.7s ease;
+}
+
+.nav-item:nth-child(2) {
+    margin-right: 146px;
+}
+
+.nav-item:nth-child(3) {
+    margin-right: 0px;
+}
+
+.dropdown {
+	position: absolute;
+	left: -22px;
+	top: 100%;
+	width: 290px;
+	background-color: #000000;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    border: 1px solid #D7BB71;
+}
+
+.dropdown-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    list-style: none;
+    padding: 20px;
+}
+
+.dropdown-active {
+	opacity: 1;
+	visibility: visible;
+}
+
+
+.line {
+    width: 100%;
+    border-bottom: 1px solid #D7BB71;
+}
+
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    background-image: url("../assets/1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 887px;
+}
+
+.wrapper {
+    display: flex;
+    width: 1920px;
+    margin: 0 auto;
+}
+
+.intro-card {
+    margin: 163px 0 0 280px;
+}
+
+.intro-card h1 {
+    margin-bottom: 22px;
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #D7BB71;
+}
+
+.intro-card h2 {
+    margin-bottom: 150px;
+    font-weight: 400;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #D7BB71;
+}
+
+.intro-card button {
+    background: none;
+    border: 1px solid #D7BB71;
+    padding: 25px 42px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #D7BB71;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.intro-card button:hover {
+    background: #D7BB71;
+    color: #000000;
+    border: 1px solid #000000;
+    transition: all 0.5s ease;
+}
+
+.ticker {
+    display: flex;
+    flex-direction: column;
+    gap: 63px;
+    background-color: #000000;
+}
+
+.cards {
+    display: flex;
+    min-width: 1920px;
+}
+
+.wrapper ul {
+    display: flex;
+    list-style: none;
+}
+
+.wrapper li {
+    position: relative;
+}
+
+.wrapper li:hover .card-description {
+    opacity: 1;
+    transition: all .5s;
+}
+
+.card-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: all .5s;
+} 
+
+.description-container {
+    margin: 179px 114px 158px 95px;
+}
+
+.description-container h1 {
+    color:#D7BB71;
+    font-weight: 600;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.description-container h2 {
+    color:#D7BB71;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.description-container button {
+    margin: 409px 0 0 200px;
+    background: none;
+    border: 1px solid #D7BB71;
+    padding: 25px 42px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #D7BB71;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.description-container button:hover {
+    background: #D7BB71;
+    color: #000000;
+    border: 1px solid #000000;
+    transition: all 0.5s ease;
+}
+
+.first-card {
+    background-image: url("../assets/2.png");
+    background-repeat: no-repeat;
+    width: 625px;
+    height: 969px;
+    border-right: 1px solid #D7BB71;
+}
+
+.middle-card {
+    background-image: url("../assets/3.png");
+    background-repeat: no-repeat;
+    width: 669px;
+    height: 969px;
+    border-right: 1px solid #D7BB71;
+}
+
+
+.third-card {
+    background-image: url("../assets/4.png");
+    background-repeat: no-repeat;
+    width: 627px;
+    height: 969px;
+    border-right: 1px solid #D7BB71;
+}
+
+.collection {
+    background-image: url("../assets/5.png");
+    width: 100%;
+    height: 797px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.collection-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 230px 0 0 470px;
+}
+
+.collection h1 {
+    font-weight: 400;
+    font-size: 40px;
+    color: #D7BB71;
+    text-transform: uppercase;
+    margin-bottom: 68px;
+}
+
+.collection h2 {
+    font-weight: 700;
+    font-size: 90px;
+    color: #D7BB71;
+    text-transform: uppercase;
+    margin-bottom: 82px;
+}
+
+.collection span {
+    font-weight: 400;
+    font-size: 24px;  
+    color: #D7BB71;
+    text-transform: uppercase;  
+}
+
+footer {
+    background-color: #000000;
+    min-width: 1920px;
+}
+
+.footer-container {
+    display: flex;
+    color: #D7BB71;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    gap: 30px;
+    margin: 68px 755px 68px 280px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    gap: 5px;
+    text-align: right;
+    margin: 68px 0 68px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+}
